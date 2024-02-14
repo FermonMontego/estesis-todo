@@ -1,0 +1,29 @@
+@use "variables-ui";
+
+.ui-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: variables-ui.$padding-ui-button;
+  background-color: variables-ui.$background-ui-button;
+  border: variables-ui.$border-ui-button;
+  border-radius: variables-ui.$border-radius-ui-button;
+
+  margin: 12px 0px;
+  transition: 0.15s all ease-in-out;
+
+  span {
+    color: #fff;
+    font-size: variables-ui.$font-size-ui-button;
+    font-weight: variables-ui.$font-weight-ui-button;
+  }
+  &:hover {
+    box-shadow: 0px 0px 0px 3px rgba(51, 153, 153, 0.25);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}

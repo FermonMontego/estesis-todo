@@ -1,0 +1,10 @@
+@use "reset";
+@use "variables";
+@use "fonts";
+@use "components/index";
+
+body {
+  background-color: variables.$general-color;
+  font-family: variables.$font-family-common;
+  font-weight: variables.$font-weight-regular;
+}
