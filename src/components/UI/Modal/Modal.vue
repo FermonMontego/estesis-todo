@@ -1,14 +1,18 @@
 <script setup lang="ts">
 import { ref } from "vue";
-// const emit = defineEmits<{
-//   (e: "close");
-// }>();
+const emit = defineEmits<{
+  (e: "close"): void;
+}>();
+
+const closeModal = () => {
+  emit("close");
+};
 </script>
 
 <template>
   <div class="overlay-modal">
     <div class="modal">
-      <span @click="emit('close')" class="modal__close">
+      <span @click="closeModal" class="modal__close">
         <ui-icon pathName="closeIcon"></ui-icon>
       </span>
       <div class="modal__wrapper">

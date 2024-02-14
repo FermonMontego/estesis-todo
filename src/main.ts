@@ -1,9 +1,9 @@
 // COMPONENTS IMPORT
 
 import UIIcon from "./components/UI/Icons/UI-Icon.vue";
-import UIInput from "./components/UI/Inputs/Input/Index.vue";
+import UIInput from "./components/UI/Inputs/Input/UI-Input.vue";
 import Modal from "./components/UI/Modal/Modal.vue";
-import Checkbox from "./components/UI/Inputs/Checkbox/Index.vue";
+import Checkbox from "./components/UI/Inputs/Checkbox/UI-Checkbox.vue";
 // END COMPONENTS IMPOT
 
 import { createApp } from "vue";

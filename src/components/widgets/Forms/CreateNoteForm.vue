@@ -8,7 +8,15 @@ const storeTodos = useTodosStore();
 
 import { type IFormNote, type ITaskExample } from "./CreateNoteForm.interface";
 
-import { ref } from "vue";
+import { computed, ref } from "vue";
+
+const disabledCreate = computed(() => {
+  return (
+    !Boolean(createNoteForm.value.title.length) ||
+    !Boolean(createNoteForm.value.tasks.length) ||
+    createNoteForm.value.tasks.filter((item) => !item.content).length > 0
+  );
+});
 
 const clearNoteForm = (): void => {
   createNoteForm.value = {
@@ -66,6 +74,7 @@ const addNoteWithTodoToList = (note_form: IFormNote) => {
     <UIButton
       :type="'button'"
       content="Создать заметку"
+      :disabled="disabledCreate"
       @click.stop.prevent="addNoteWithTodoToList(createNoteForm)"
     />
   </form>

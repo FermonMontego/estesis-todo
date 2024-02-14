@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import CreateNoteForm from "../components/widgets/Forms/CreateNoteForm.vue";
-import TaskList from "../components/widgets/ListTasks/Index.vue";
+import TaskList from "../components/widgets/ListTasks/ListTasks.vue";
 
 const inputCheckbox = ref<boolean>(false);
 </script>
