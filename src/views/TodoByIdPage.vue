@@ -110,9 +110,6 @@ const changeSomethings = (): void => {
 };
 </script>
 <template>
-  <pre>
-    {{ todo }}
-  </pre>
   <div class="container todo-by-id">
     <h3>
       <template v-if="isEditNote">
